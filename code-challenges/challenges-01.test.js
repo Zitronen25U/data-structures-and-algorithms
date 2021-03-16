@@ -120,8 +120,6 @@ Return the modified array.
 
 
 const addValues = (arr, value) => {
-  const newArr = [];
-  this.arr = [];
 
 };
 
