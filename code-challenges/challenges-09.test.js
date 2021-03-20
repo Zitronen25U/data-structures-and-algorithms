@@ -18,6 +18,14 @@ Becomes:
 ]
 ------------------------------------------------------------------------------------------------ */
 
+// describe('Testing challenge 1', () => {
+//   test('It should return a list of key value pairs inside of li tags', () => {
+//     expect(transformToLis({name: 'bob', age: 32})[0]).toStrictEqual(`<li>name: bob</li>`);
+//     expect(transformToLis({name: 'bob', age: 32})[1]).toStrictEqual(`<li>age: 32</li>`);
+//     expect(transformToLis({})).toStrictEqual([]);
+//   });
+// });
+
 function transformToLis(obj){
 
 }
@@ -79,10 +87,13 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  const value = arr.reduce((ans, val) => {
-    
+  const newArr = arr.reduce((a, b) => {
+    a = a[b];
+    return a;
   });
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -157,11 +168,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  const newStr = str.reduce((ans, val, inx) => {
-    ans = ans - val;
-    return ans;
-  }, 0);
-  return newStr;
+  return str.split('').reduce((a, b) => b + a, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -214,7 +221,7 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -226,7 +233,11 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  const newVal = arr.reduce((a, val, index) => {
+    a = a * val, a + val;
+    return a;
+  }, 0);
+  return newVal;
 };
 
 /* ------------------------------------------------------------------------------------------------
