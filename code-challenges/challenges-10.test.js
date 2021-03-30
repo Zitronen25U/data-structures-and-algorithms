@@ -163,8 +163,12 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-
+  const genderChar = data.filter(character => {
+    return (character.gender === 'female') || character.gender === 'male';
+  }).map(character => character.name).join(' and ');
+  return genderChar;
 };
+findMaleAndFemale(starWarsData);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
