@@ -7,10 +7,12 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
+
   const ans = [];
   arr.forEach(value => ans.push(value + 2));
   return ans;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -20,8 +22,10 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
+
   let regex = /[w]/;
   return regex.test(str);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,8 +41,10 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
+
   let regex = /\d/;
   return regex.test(input);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,8 +55,10 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
+
   let regex = /\bworld\b/;
   return regex.test(input);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,9 +70,11 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
+
   let regex = /\b[A-Z]+\b/g;
   let arr = str.match(regex);
   return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,6 +84,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+
   let regex = /^[A-J]\w/;
   let result = [];
   arr.forEach(city => {
@@ -82,6 +93,7 @@ const citiesAtoJ = (arr) => {
     }
   });
   return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
