@@ -25,8 +25,10 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
-}
+  return starWarsArr.sort((a, b) => {
+    return b.height - a.height;
+  });
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,7 +37,9 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  const newArr = arr;
+  arr.splice(idx, 3);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,7 +49,8 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-  // Solution code here...
+  const newArr = arr.join(' ');
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,7 +68,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i <= str.length; i++) {
+    result.push(str.slice(i));
+  }
   return result;
 };
 
@@ -76,8 +83,10 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  const newArr = arr.split('');
+  return newArr;
 };
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,12 +129,25 @@ const gruffaloCrumble = {
   ]
 };
 
-
 const listFoods = (recipe) => {
+
   let result = [];
-  // Solution code here...
+
+  recipe.ingredients.forEach(value => {
+
+    let num = 0;
+
+    for (let i = 0; i < value.length; i++) {
+      if (value[i] === ' ') num++;
+      if (num === 2) {
+        result.push(value.slice(i + 1));
+        return;
+      }
+    }
+  });
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
