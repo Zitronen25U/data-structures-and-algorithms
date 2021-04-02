@@ -25,8 +25,11 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  const newVal = starWarsArr.sort((a, b) => (a.height) < (b.height));
-  return newVal;
+
+  return starWarsArr.sort((a, b) => {
+    return b.height - a.height;
+  });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,7 +55,6 @@ const joinArray = (arr) => {
   return newArr;
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -68,10 +70,11 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  for (let i = 0; i < str.lenght; i++) {
+  
+  for (let i = 0; i <= str.length; i++) {
     result.push(str.slice(i));
   }
-  // Solution code here...
+
   return result;
 };
 
@@ -132,19 +135,25 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
+
   let result = [];
 
-  const food = recipe.ingredients;
+  recipe.ingredients.forEach(value => {
 
-  for (let i = 0; i < food.length; i++) {
-    let list = food[i].indexOf(' ') + 1;
-    let newItem = food[i].slice(list);
-    let index = newItem.indexOf(' ') + 1;
-    result.push(newItem.slide(index));
-  }
+    let num = 0;
 
+    for (let i = 0; i < value.length; i++) {
+      if (value[i] === ' ') num++;
+      if (num === 2) {
+        result.push(value.slice(i + 1));
+        return;
+      }
+    }
+  });
   return result;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
