@@ -14,8 +14,8 @@ Write a function named returnTen, takes in a string and uses split and splice to
 // });
 
 function returnTen(str){
-  let newSplit = str.split(str);
-  let finalSplit = newSplit.splice(0, 10);
+  let newSplit = str.split('');
+  let finalSplit = newSplit.splice(-10);
   return finalSplit;
 }
 
