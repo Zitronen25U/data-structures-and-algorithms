@@ -5,5 +5,7 @@ def reverse_list(ll):
     Returns:
         linked list in reversed form
     """
-    # put your function implementation here
-    return ll
+    ![Solution](./python/img/reverse_linked_list.py.jpg)
+
+
+

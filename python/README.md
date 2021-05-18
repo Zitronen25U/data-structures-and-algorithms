@@ -2,6 +2,28 @@
 
 ## Language: `Python`
 
+## Directory:
+
+- [Challenge 01](../python/code_challenges/reverse_linked_list.py)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
