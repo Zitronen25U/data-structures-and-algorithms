@@ -8,9 +8,6 @@ class LinkedList:
     def __init__(self, head=None):
         self.head = head
 
-    def insert(self, value):
-        self.head = Node(value, self.head)
-
     def includes(self, value):
         current = self.head
         while current:
@@ -18,6 +15,11 @@ class LinkedList:
                 return True
             current = current.next
         return False
+
+
+    def insert(self, value):
+        self.head = Node(value, self.head)
+
 
     def valueFinder(self):
         values = []
