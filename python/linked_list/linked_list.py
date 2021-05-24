@@ -19,7 +19,7 @@ class LinkedList:
             current = current.next
         return False
 
-    def find_all_values(self):
+    def valueFinder(self):
         values = []
         current = self.head
 
