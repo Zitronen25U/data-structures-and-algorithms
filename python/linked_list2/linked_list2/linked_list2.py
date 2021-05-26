@@ -79,6 +79,21 @@ class LinkedList:
             insert_before_this = current.next
 
 
+def kth_from_end(self, num):
+        if num < 0:
+            return "not in range"
+        if self.length == 1:
+            return "only 1 node"
+        if num > self.length:
+            return "not in range"
+        if self.length - num == 0:
+            return self.head.value
+        current = self.head
+        for _ in range(0, self.length - num - 1):
+            current = current.next
+        return current.value
+
+
 
 
 

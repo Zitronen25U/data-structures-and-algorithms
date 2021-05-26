@@ -1,10 +1,10 @@
 # Challenge Summary
 
-Extend a Linked List to allow various insertion methods.
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
 ## Whiteboard Process
 
-![Check it Out!](/python/linked_list2/Capture.PNG)
+![Check it Out!](/python/linked_list2/chal07.PNG)
 
 ## Approach & Efficiency
 
@@ -13,3 +13,4 @@ Determined that we needed methods to create new values at the desired points spe
 ## Solution
 
 [check it out!](/python/linked_list2/linked_list2/linked_list2.py)
+
