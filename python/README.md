@@ -13,3 +13,5 @@
 - [Challenge 05](../python/linked_list/README.md)
 
 - [Challenge 07](../python/linked_list2/README.md)
+
+- [Challenge 08](../python/ll_zip/README.md)
