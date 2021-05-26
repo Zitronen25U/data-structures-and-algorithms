@@ -1,6 +1,6 @@
-from linked_list2.linked_list2 import LinkedList
+# from linked_list2.linked_list2 import LinkedList
 
-def addNewNode():
-    node = Node()
-    
+# def addNewNode():
+#     node = Node()
+
 

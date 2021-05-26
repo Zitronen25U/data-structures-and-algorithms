@@ -19,8 +19,8 @@ class LinkedList:
         return False
 
 
-   def insert(self, value):
-        self.head = Node(value, self.head)
+#    def insert(self, value):
+#         self.head = Node(value, self.head)
 
 
     def append(self, value):
@@ -92,6 +92,34 @@ def kth_from_end(self, num):
         for _ in range(0, self.length - num - 1):
             current = current.next
         return current.value
+
+
+
+# class zipLists(list1, list2):
+
+#     list1_curr = list1.head
+#     list2_curr = list2.head
+
+#     # Save Next in Var's
+#     while list1_curr and list2_curr:
+#         list1_next = list1_curr.next
+#         list2_next = list2_curr.next
+
+#         # Make list2 current as next of list1
+
+#         list1_curr.next = list2_next
+#         list2_curr.next = list1_next
+
+#         # Update current to next iteration
+#         list1_curr = list2_next
+#         list2_curr = list1_next
+
+#     list1.head = list1_curr
+
+
+
+
+
 
 
 
