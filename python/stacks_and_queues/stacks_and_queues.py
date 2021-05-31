@@ -30,3 +30,15 @@ class Stack:
 
 
 
+class Queue():
+    def __init__(self, value):
+        self.front = None
+
+    def enqueue(self, value):
+        self.front = Node(value, self.front)
+
+    def dequeue(self):
+        pass
+        # need to figure this out?
+
+
