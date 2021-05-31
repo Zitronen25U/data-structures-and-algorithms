@@ -15,3 +15,5 @@
 - [Challenge 07](../python/linked_list2/README.md)
 
 - [Challenge 08](../python/ll_zip/README.md)
+
+- [Challenge 10](../python/stacks_and_queues/README.md)
