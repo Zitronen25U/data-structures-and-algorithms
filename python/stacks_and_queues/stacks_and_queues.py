@@ -41,4 +41,10 @@ class Queue():
         pass
         # need to figure this out?
 
+     def peek(self):
+        if not self.front:
+            raise InvalidOperationError("Method not allowed on empty collection")
+
+    def is_empty(self):
+        return self.front is None
 
