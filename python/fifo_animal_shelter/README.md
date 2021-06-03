@@ -6,4 +6,10 @@ Create a class called AnimalShelter which holds only dogs and cats. The shelter 
 
 ![Check it out](../fifo_animal_shelter/animal_shelter.jpg)
 
+## Approach and Efficiency:
+
+- we took an approach of utilizing existing classes that we had built, and utilizing those classes to add our data
+
 ## Solution
+
+![Check it out](../fifo_animal_shelter/fifo_animal_shelter.py)

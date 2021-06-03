@@ -46,7 +46,6 @@ class AnimalShelter:
     if animal == 'cat':
       self.cats.enqueue(random.choice(self.cat_names))
 
-
     if animal == 'dog':
       self.dogs.enqueue(random.choice(self.dogs_names))
 
