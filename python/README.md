@@ -17,3 +17,5 @@
 - [Challenge 08](../python/ll_zip/README.md)
 
 - [Challenge 10](../python/stacks_and_queues/README.md)
+
+- [Challenge 12](../python/fifo_animal_shelter/README.md)
