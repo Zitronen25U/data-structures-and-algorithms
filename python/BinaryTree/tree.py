@@ -35,6 +35,7 @@ class BinaryTree():
 
         return collected_values
 
+
     def in_order(self):
         def walk(root, collection):
             if not root:
@@ -62,6 +63,31 @@ class BinaryTree():
         collected_values = []
         walk(self.root, collected_values)
         return collected_values
+
+
+
+def find_maximum_value(self):
+        def walk(root, collection):
+            if not root:
+                return
+
+            walk(root.left, collection)
+            walk(root.right, collection)
+            collection.append(root.value)
+
+        collected_values = []
+
+        walk(self.root, collected_values)
+
+        max = 0
+
+        for i in collected_values:
+            if i > max:
+                max = i
+        return max
+
+
+
 
 class BinarySearchTree(BinaryTree):
     def add(self,value):
