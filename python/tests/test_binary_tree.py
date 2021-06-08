@@ -1,3 +1,4 @@
+from python.BinaryTree.tree import Queue
 import pytest
 from BinaryTree.tree import Node, BinaryTree, BinarySearchTree
 
@@ -99,5 +100,18 @@ def test_to_enqueue():
     tree.root.right = Node(3)
     actual = BinaryTree.breadth_first(tree)
     expected = [1,2,3]
+    assert actual == expected
+
+def test_is_empty():
+    tree = BinaryTree()
+    actual = BinaryTree.breadth_first(tree)
+    expected = []
+    assert actual == expected
+
+def test_que_can_add():
+    queue = Queue()
+    queue.enqueue("apple")
+    actual = queue.peek()
+    expected = "apple"
     assert actual == expected
 

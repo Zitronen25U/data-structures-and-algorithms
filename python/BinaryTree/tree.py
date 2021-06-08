@@ -20,10 +20,16 @@ class Queue:
         self.storage.pop()
 
     def peek(self):
-        return self.storage[0]
+        if self.storage:
+            return self.storage[0]
+        else:
+            raise InvalidOperationError("method not allowed")
 
     def is_empty(self):
-        return len(self.storage) == 0
+        if self.storeage:
+            return len(self.storage) == 0
+        else:
+            raise InvalidOperationError("method not allowed")
 
 
 class BinaryTree:
@@ -119,6 +125,8 @@ class BinaryTree:
         queue_breadth.enqueue(tree.root)
         collection = []
         
+        if not tree.root:
+            return collection
 
         while not queue_breadth.is_empty():
             current = queue_breadth.dequeue()
