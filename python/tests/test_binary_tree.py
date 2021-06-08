@@ -1,5 +1,5 @@
 import pytest
-from tree.tree import Node, BinaryTree, BinarySearchTree
+from BinaryTree.tree import Node, BinaryTree, BinarySearchTree
 
 
 # @pytest.mark.skip("pending")
