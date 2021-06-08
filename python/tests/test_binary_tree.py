@@ -82,3 +82,22 @@ def test_max_value():
     actual = tree.max()
     expected = 50
     assert actual == expected
+
+
+
+# ------------------------------ #
+# ------------------------------ #
+# ------------------------------ #
+
+
+# Chal 17
+
+def test_to_enqueue():
+    tree = BinaryTree()
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    actual = BinaryTree.breadth_first(tree)
+    expected = [1,2,3]
+    assert actual == expected
+
