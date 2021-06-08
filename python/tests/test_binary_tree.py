@@ -72,108 +72,13 @@ def test_add_lesser_to_not_empty_bst():
     assert actual == expected
 
 
-@pytest.mark.skip("pending")
-def test_add_greater_to_not_empty_bst():
-    tree = BinarySearchTree()
+def test_max_value():
+    tree = BinarySearchTree
     tree.add(5)
-    tree.add(7)
-    actual = tree.root.right.value
-    expected = 7
-    assert actual == expected
-
-
-@pytest.mark.skip("pending")
-def test_add_lesser_then_in_between():
-    tree = BinarySearchTree()
-    tree.add(5)
-    tree.add(2)
+    tree.add(20)
     tree.add(3)
-    actual = tree.root.left.right.value
-    expected = 3
-    assert actual == expected
-
-
-@pytest.mark.skip("pending")
-def test_add_greater_then_in_between():
-    tree = BinarySearchTree()
-    tree.add(5)
-    tree.add(10)
-    tree.add(7)
-    actual = tree.root.right.left.value
-    expected = 7
-    assert actual == expected
-
-
-@pytest.mark.skip("pending")
-def test_bst_contains():
-    tree = BinarySearchTree()
-    tree.add(5)
-    tree.add(10)
-    tree.add(6)
-    tree.add(7)
-    actual = tree.contains(7)
-    expected = True
-    assert actual == expected
-
-
-@pytest.mark.skip("pending")
-def test_pre_order():
-    tree = BinarySearchTree()
+    tree.add(45)
     tree.add(50)
-    tree.add(25)
-    tree.add(75)
-    tree.add(20)
-    tree.add(80)
-    tree.add(40)
-
-    """
-                50
-            25      75
-        20    40          80
-    """
-
-    actual = tree.pre_order()
-    expected = [50, 25, 20, 40, 75, 80]
-    assert actual == expected
-
-
-@pytest.mark.skip("pending")
-def test_in_order():
-    tree = BinarySearchTree()
-    tree.add(50)
-    tree.add(25)
-    tree.add(75)
-    tree.add(20)
-    tree.add(80)
-    tree.add(40)
-
-    """
-                50
-            25      75
-        20    40          80
-    """
-
-    actual = tree.in_order()
-    expected = [20, 25, 40, 50, 75, 80]
-    assert actual == expected
-
-
-@pytest.mark.skip("pending")
-def test_post_order():
-    tree = BinarySearchTree()
-    tree.add(50)
-    tree.add(25)
-    tree.add(75)
-    tree.add(20)
-    tree.add(80)
-    tree.add(40)
-
-    """
-                50
-            25      75
-        20    40          80
-    """
-
-    actual = tree.post_order()
-    expected = [20, 40, 25, 80, 75, 50]
+    actual = tree.max()
+    expected = 50
     assert actual == expected
