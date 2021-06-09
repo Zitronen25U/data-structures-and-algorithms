@@ -20,4 +20,4 @@
 
 - [Challenge 12](../python/fifo_animal_shelter/README.md)
 
-- [Challenge 15](../python/tree/README.md)
+- [Challenge 15](../python/BinaryTree/README.md)

@@ -1,10 +1,38 @@
-class Node():
+from collections import deque
+
+
+class Node:
     def __init__(self,value):
         self.value = value
         self.left = None
         self.right = None
 
-class BinaryTree():
+
+
+class Queue:
+    def __init__(self):
+        self.storage = deque()
+
+    def enqueue(self, value):
+        self.storage.appendleft(value)
+
+    def dequeue(self):
+        self.storage.pop()
+
+    def peek(self):
+        if self.storage:
+            return self.storage[0]
+        else:
+            raise InvalidOperationError("method not allowed")
+
+    def is_empty(self):
+        if self.storeage:
+            return len(self.storage) == 0
+        else:
+            raise InvalidOperationError("method not allowed")
+
+
+class BinaryTree:
     def __init__(self):
         self.root = None
 
@@ -51,6 +79,8 @@ class BinaryTree():
 
         return collected_values
 
+
+
     def post_order(self):
         def walk(root, collection):
             if not root:
@@ -66,25 +96,53 @@ class BinaryTree():
 
 
 
-def find_maximum_value(self):
-        def walk(root, collection):
-            if not root:
-                return
 
-            walk(root.left, collection)
-            walk(root.right, collection)
-            collection.append(root.value)
+    def find_maximum_value(self):
+            def walk(root, collection):
+                if not root:
+                    return
 
-        collected_values = []
+                walk(root.left, collection)
+                walk(root.right, collection)
+                collection.append(root.value)
 
-        walk(self.root, collected_values)
+            collected_values = []
 
-        max = 0
+            walk(self.root, collected_values)
 
-        for i in collected_values:
-            if i > max:
-                max = i
-        return max
+            max = 0
+
+            for i in collected_values:
+                if i > max:
+                    max = i
+            return max
+
+
+
+    @staticmethod
+    def breadth_first(tree):
+        queue_breadth = Queue()
+        queue_breadth.enqueue(tree.root)
+        collection = []
+        
+        if not tree.root:
+            return collection
+
+        while not queue_breadth.is_empty():
+            current = queue_breadth.dequeue()
+            return collection.append(current.value)
+
+            if current.left:
+                queue_breadth.enqueue(current.left)
+                
+
+            if current.right:
+                queue_breadth.enqueue(current.right)
+            
+            
+        return collection
+
+    
 
 
 

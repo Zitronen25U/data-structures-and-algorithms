@@ -1,5 +1,6 @@
+from python.BinaryTree.tree import Queue
 import pytest
-from tree.tree import Node, BinaryTree, BinarySearchTree
+from BinaryTree.tree import Node, BinaryTree, BinarySearchTree
 
 
 # @pytest.mark.skip("pending")
@@ -82,3 +83,35 @@ def test_max_value():
     actual = tree.max()
     expected = 50
     assert actual == expected
+
+
+
+# ------------------------------ #
+# ------------------------------ #
+# ------------------------------ #
+
+
+# Chal 17
+
+def test_to_enqueue():
+    tree = BinaryTree()
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    actual = BinaryTree.breadth_first(tree)
+    expected = [1,2,3]
+    assert actual == expected
+
+def test_is_empty():
+    tree = BinaryTree()
+    actual = BinaryTree.breadth_first(tree)
+    expected = []
+    assert actual == expected
+
+def test_que_can_add():
+    queue = Queue()
+    queue.enqueue("apple")
+    actual = queue.peek()
+    expected = "apple"
+    assert actual == expected
+
