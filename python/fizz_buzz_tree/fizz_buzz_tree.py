@@ -19,6 +19,9 @@ def breadth_first_fizzbuzz(tree):
     q.append(tree.root)
     # while there are things in the queue loop
     # while (len(q) > 0):
+
+    new_tree = Tree()
+
     while q:
         # do stuff
         fizzbuzz_value = fizzbuzz(q[0].value)
@@ -50,25 +53,9 @@ def fizzbuzz(root_value):
     return str(root_value)
 
 
+def make_new_tree(fizzbuzz):
+    pass
 
-if __name__ == "__main__":
-    one = Node(1)
-    two = Node(2)
-    three = Node(3)
-    four = Node(4)
-    five = Node(5)
-    six = Node(6)
-    seven = Node(7)
-    eight = Node(8)
-    """
-                1
-            2          5
-        3      4     6 7 8
-    """
-    one.children = [two, five]
-    two.children = [three, four]
-    five.children = [six, seven, eight]
-    kt = Tree()
-    kt.root = one
-    bf_collection = breadth_first(kt)
-    print(bf_collection)
+
+
+
