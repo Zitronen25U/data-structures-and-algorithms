@@ -22,5 +22,3 @@ You can select a pivot point based on the following. You can choose any of these
 4. Using recursion, we will repeat step 2 through both halves of the list. 
 
 The list should now be in order!
-
-- 
