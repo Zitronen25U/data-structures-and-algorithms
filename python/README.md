@@ -21,3 +21,7 @@
 - [Challenge 12](../python/fifo_animal_shelter/README.md)
 
 - [Challenge 15](../python/BinaryTree/README.md)
+
+- [Challenge 27](../python/merge_sort/README.md)
+
+- [Challenge 28](../python/quick_sort/README.md)
