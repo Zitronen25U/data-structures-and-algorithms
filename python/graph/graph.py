@@ -14,7 +14,7 @@ class Graph:
     def get_nodes(self):
         return tuple(self.adjacency_list.keys())
 
-    def get_neighbors(self, vertex): ##???
+    def get_neighbors(self, vertex):
         return self.adjacency_list[vertex]
 
     def size(self):
