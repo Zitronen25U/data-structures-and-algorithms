@@ -12,8 +12,6 @@ def business_trip(graph, cities):
       origin = city
 
 
-
-  
   while tripdone > 0:
     edges = graph.get_neighbors(origin)
     for count, edge in enumerate(edges):
